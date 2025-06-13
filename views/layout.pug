@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/styles.css')
+    link(rel='preconnect', href='https://fonts.googleapis.com')
+    link(href='https://fonts.googleapis.com/css2?family=Sacramento&display=swap', rel='stylesheet')
+
+  body
+    nav.navbar.navbar-expand-lg.navbar-light(style="background:#DAAA0E; padding: 1rem;")
+      .container
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='/') Home
+          li.nav-item
+            span.nav-link | |
+          li.nav-item
+            a.nav-link(href='#') Blog
+
+        ul.navbar-nav.ml-auto
+          li.nav-item
+           a.nav-link(href='/form', style='font-weight: bold; color: white;') Register
+
+
+    block content
+
+    footer.text-center.mt-5.mb-3(style="background:#DAAA0E; padding: 10px; color: #000;")
+      | © Copyright 2021

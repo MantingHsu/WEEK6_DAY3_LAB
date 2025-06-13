@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  .main-layout
+    .left-panel
+      span Simple Kitchen
+      h4 Simple & Comforting
+      h5 Recipes All Year Round
+
+    .right-panel
+      if errors
+        ul.my-errors
+          each error in errors
+            li= error.msg
+
+      h2 Register to subscribe
+
+      form.form-registration(action="/form" method="POST")
+        label(for="name") Name:
+        input(type="text" id="name" name="name" value=(data && data.name) || '')
+
+        label(for="email") Email:
+        input(type="email" id="email" name="email" value=(data && data.email) || '')
+
+        label(for="username") Username:
+        input(type="text" id="username" name="username" value=(data && data.username) || '')
+
+        label(for="password") Password:
+        input(type="password" id="password" name="password")
+
+        input(type="submit" value="Register")
